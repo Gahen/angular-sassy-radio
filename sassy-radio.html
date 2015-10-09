@@ -1,0 +1,5 @@
+<label style="border-color: {{borderColor}}" ng-click="updateModel(!checked)">
+	<ng-transclude></ng-transclude>
+	<span class="sassy-radio-checked" ng-if="checked"></span>
+	<input type="hidden" ng-model="ngModel"/>
+</label>

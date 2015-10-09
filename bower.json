@@ -1,0 +1,25 @@
+{
+  "name": "angular-sassy-radio",
+  "version": "0.0.0",
+  "authors": [
+    "Joaquín Omar Tumas <j.tumas@gmail.com>"
+  ],
+  "description": "Cool radio buttons for AngularJS",
+  "keywords": [
+    "angularjs",
+    "radio",
+    "form"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "lodash": "~3.10.1"
+  }
+}
