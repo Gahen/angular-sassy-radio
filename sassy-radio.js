@@ -4,17 +4,17 @@ angular.module('sassyRadio', [])
 	.directive('sassyRadio', function() {
 		return {
 			scope: {
-				borderColor: '@',
-				ngModel: '=',
-				transclude: true
+				ngModel: '='
 			},
 			restrict: 'AE',
 			templateUrl: 'sassy-radio.html',
+			transclude: true,
+			require: '^ngModel',
 			link: function(scope, iElement, iAttrs, ngModelController) {
 				scope.checked = scope.ngModel.$viewValue;
 				scope.borderColor = scope.borderColor || '#000';
 				ngModelController.$render = function() {
-					iElement.find('div').text(ngModelController.$viewValue);
+					scope.checked = ngModelController.$viewValue;
 				};
 
 				scope.updateModel = function(state) {

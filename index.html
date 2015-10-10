@@ -1,14 +1,40 @@
 <!doctype html>
-<html ng-app="sassyRadio">
+<html ng-app="demoApp">
 	<head>
 		<style>
 			label {
 				border-radius: 4px;
 			}
+			.sassy-radius__circle {
+				display: block;
+				float: left;
+			}
+			.sassy-radius__fill {
+				display: block;
+				width: 90%;
+				height: 90%;
+				border-radius: 100%
+			}
+
+			/** override this with your own properties **/
+			.sassy-radius__circle {
+				margin: 0 6px;
+				width: 17px;
+				height: 17px;
+				border: 1px solid #666;
+				border-radius: 9px;
+			}
+			.sassy-radius__fill {
+				width: 13px;
+				height: 13px;
+				margin: 2px;
+				background-color: #0077CC;
+			}
 		</style>
+		<script src="bower_components/lodash/lodash.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
-		<script src="sassy-radio.js"></script>
-		<script src="demo.js"></script>
+		<script src="./demo.js"></script>
+		<script src="./sassy-radio.js"></script>
 	</head>
 	<body ng-controller="DemoCtrl">
 		<div sassy-radio ng-model="value">fafrula</div>

@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('sassyRadio', [])
-	.config(_.noop)
-	.run(_.noop)
+angular.module('demoApp', ['sassyRadio'])
 	.controller('DemoCtrl', function($scope) {
 		$scope.value = true;
 	});
