@@ -1,5 +1,6 @@
 {
   "name": "angular-sassy-radio",
+  "appPath": ".",
   "version": "0.0.0",
   "authors": [
     "Joaquín Omar Tumas <j.tumas@gmail.com>"
