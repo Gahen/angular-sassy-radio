@@ -2,5 +2,5 @@
 
 angular.module('demoApp', ['sassyRadio'])
 	.controller('DemoCtrl', function($scope) {
-		$scope.value = true;
+		$scope.value = false;
 	});
