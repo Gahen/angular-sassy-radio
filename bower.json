@@ -2,7 +2,7 @@
   "name": "angular-sassy-radio",
   "appPath": ".",
   "version": "0.0.0",
-  "main": "dist/angular-sassy-radio.js",
+  "main": ["./dist/angular-sassy-radio.js"],
   "authors": [
     "Joaquín Omar Tumas <j.tumas@gmail.com>"
   ],
