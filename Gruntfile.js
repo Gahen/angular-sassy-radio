@@ -25,7 +25,10 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		html2js: {
 			options: {
-				// custom options, see below
+				base: './',
+				module: 'sassyRadio',
+				singleModule: true,
+				existingModule: true
 			},
 			main: {
 				src: ['sassy-radio.html'],

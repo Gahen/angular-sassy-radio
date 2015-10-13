@@ -11,7 +11,7 @@ angular.module('sassyRadio', [])
 			transclude: true,
 			require: '^ngModel',
 			link: function(scope, iElement, iAttrs, ngModelController) {
-				scope.checked = scope.ngModel.$viewValue;
+				scope.checked = ngModelController.$viewValue;
 				scope.borderColor = scope.borderColor || '#000';
 				ngModelController.$render = function() {
 					scope.checked = ngModelController.$viewValue;
