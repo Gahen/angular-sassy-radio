@@ -11,7 +11,7 @@ angular.module('sassyRadio', [])
 			transclude: true,
 			require: '^ngModel',
 			link: function(scope, iElement, iAttrs, ngModelController) {
-				scope.checked = scope.ngModel.$viewValue;
+				scope.checked = ngModelController.$viewValue;
 				scope.borderColor = scope.borderColor || '#000';
 				ngModelController.$render = function() {
 					scope.checked = ngModelController.$viewValue;
@@ -31,10 +31,8 @@ angular.module('sassyRadio', [])
 	});
 
 
-angular.module('templates-main', ['../sassy-radio.html']);
-
-angular.module("../sassy-radio.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("../sassy-radio.html",
+angular.module('sassyRadio').run(['$templateCache', function($templateCache) {
+  $templateCache.put("sassy-radio.html",
     "<label style=\"border-color: {{borderColor}}\" ng-click=\"updateModel(!checked)\">\n" +
     "	<div class=\"sassy-radius__circle\">\n" +
     "		<span class=\"sassy-radius__fill\" ng-show=\"checked\"></span>\n" +
